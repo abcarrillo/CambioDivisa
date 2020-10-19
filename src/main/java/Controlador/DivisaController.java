@@ -40,6 +40,7 @@ public class DivisaController {
 			}
 			case "Yen": {
 				origen = yen;
+				break;
 			}
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + seleccion);
@@ -64,6 +65,7 @@ public class DivisaController {
 			}
 			case "Yen": {
 				destino = yen;
+				break;
 			}
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + seleccion);
@@ -77,13 +79,6 @@ public class DivisaController {
 		});;
 	}
 
-	public Divisa getDivisaOrigen() {
-		return origen;
-	}
-
-	public Divisa getDivisaDestino() {
-		return destino;
-	}
 
 	public Pantalla getPantalla() {
 		return pantalla;
