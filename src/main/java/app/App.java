@@ -1,6 +1,6 @@
-package Modelo;
+package app;
 
-import Controlador.DivisaController;
+import controlador.DivisaController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

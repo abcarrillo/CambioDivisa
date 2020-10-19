@@ -1,4 +1,4 @@
-package Vista;
+package vista;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -7,12 +7,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
-public class Pantalla extends VBox {
+public class Pantalla<T> extends VBox {
 	
 	private TextField origenText;
 	private TextField destinoText;
-	private ComboBox origenCombo;
-	private ComboBox destinoCombo;
+	private ComboBox<T> origenCombo;
+	private ComboBox<T> destinoCombo;
 	private Button cambiarButton;
 	
 	public Pantalla() {
@@ -24,10 +24,8 @@ public class Pantalla extends VBox {
 		origenText.setText("0");
 		origenText.setPrefColumnCount(4);
 		
-		origenCombo = new ComboBox();
-		origenCombo.getItems().addAll("Euro", "Libra", "Yen", "Dolar");
+		origenCombo = new ComboBox<>();
 		origenCombo.getSelectionModel().select(0);
-		
 		
 		HBox origenBox = new HBox();
 		origenBox.setAlignment(Pos.BASELINE_CENTER);
@@ -39,8 +37,7 @@ public class Pantalla extends VBox {
 		destinoText.setText("0");
 		destinoText.setPrefColumnCount(4);
 		
-		destinoCombo = new ComboBox();
-		destinoCombo.getItems().addAll("Euro", "Libra", "Yen", "Dolar");
+		destinoCombo = new ComboBox<>();
 		destinoCombo.getSelectionModel().select(1);
 		
 		HBox destinoBox = new HBox();
@@ -67,11 +64,11 @@ public class Pantalla extends VBox {
 	}
 
 
-	public ComboBox getOrigenCombo() {
+	public ComboBox<T> getOrigenCombo() {
 		return origenCombo;
 	}
 
-	public ComboBox getDestinoCombo() {
+	public ComboBox<T> getDestinoCombo() {
 		return destinoCombo;
 	}
 
